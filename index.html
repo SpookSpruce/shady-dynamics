@@ -1,77 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shady Dynamics</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="i-style.css">
-    <script src="scripts.js"></script>
+    <title>Shady Portal</title>
 </head>
-<body class="rubik-regular">
-	<div class="tab-container" style="background-color: white; width: 100%; z-index: 1000;">
-        <h1>Shady Dynamics</h1>
-        <span class="tab" id="info" onclick="openTab(event, 'info-content')">What is Shady Dynamics?</span>
-		<span class="tab" id="file-download" onclick="openTab(event, 'file-download-content')">File Download</span>
-        <span class="tab" id="test-page" onclick="openTab(event, 'test-page-content')">Test Page</span>
-    </div>
-    <div class="tabcontent" id="info-content">
-        <h2>What is Shady Dynamics?</h2>
-        <p>Shady Dynamics is a fun project we are working on.</p>
-    </div>
-    <div class="tabcontent" id="file-download-content">
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/final-lift.zip" download>Download Final Lift</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/badluck-butter-chicken-flies-the-unfriendly-skies.zip" download>Download Badluck Butter Chicken Flies the Unfriendly Skies</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/badluck-butter-chicken-goes-to-outer-space.zip" download>Download Badluck Butter Chicken Goes to Outer Space</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/do-not-make-13.zip" download>Download Do Not Make 13</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/economy-of-motion.zip" download>Download Economy of Motion</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/escape-from-planet-xiii.zip" download>Download Escape From Planet XIII</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/not-13.zip" download>Download Not 13</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/q1k3.zip" download>Download Q1K3</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/tower-defence-walking-13s.zip" download>Download Tower Defence Walking 13</a>
-        </div>
-        <div class="file-card">
-            <img src="file.png">
-            <a href="Files/tron-2.0.zip" download>Download Tron 2.0</a>
-        </div>
-    </div>
-    <div class="tabcontent" id="test-page-content">
-        <p class="">Version 1.0.0</p>
-        <p class="hackerfont">Placeholder</p>
-        <p class="rubik-regular">Rubik Regular Font</p>
-        <p class="rubik-bold">Rubik Bold Font</p>
-        <p>Lorem Ipsum Dolor Sit Amet</p>
-        <button style="background-color: chartreuse;" onclick="alert('Success!')">This is a button test</button>
-        <button class="" style="background-color: rgb(255, 217, 0);" onclick="alert('Success!')">This is a tab test</button>
-        <br>
-        <p id="output-test">This is a output test.</p>
-        <input type="text" placeholder="This is a text input" style="background-color: lightblue; color: black; font-family: 'Rubik', sans-serif; font-size: 16px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-    </div>
+<body>
+
+    <h1>Enter a Code</h1>
+    <input type="text" id="codeInput" placeholder="Enter code here">
+    <button onclick="goToPage()">Go</button>
+
+    <script>
+        function goToPage() {
+            var code = document.getElementById("codeInput").value;
+            
+            if (code === "123") {
+                window.location.href = "page1.html";
+            } else if (code === "456") {
+                window.location.href = "page2.html";
+            } else if (code === "789") {
+                window.location.href = "page3.html";
+            } else {
+                alert("Invalid code. Please try again.");
+            }
+        }
+    </script>
+
 </body>
 </html>
