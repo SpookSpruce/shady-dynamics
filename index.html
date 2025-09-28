@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shady Portal</title>
+    <link rel="stylesheet" href="mach.css">
 </head>
 <body>
 
-    <h1>Enter a Code</h1>
-    <input type="text" id="codeInput" placeholder="Enter code here">
-    <button onclick="goToPage()">Go</button>
+<div id="screen">
+    <div id="mach">
+        <h1>Enter a Code</h1>
+        <input type="text" id="codeInput" placeholder="Enter code here">
+        <button onclick="goToPage()">Go</button>
+    </div>
+</div>
 
-    <script>
-        function goToPage() {
-            var code = document.getElementById("codeInput").value;
-            
-            if (code === "123") {
-                window.location.href = "page1.html";
-            } else if (code === "456") {
-                window.location.href = "page2.html";
-            } else if (code === "789") {
-                window.location.href = "page3.html";
-            } else {
-                alert("Invalid code. Please try again.");
-            }
+<script>
+    function goToPage() {
+        var code = document.getElementById("codeInput").value;
+        
+        if (code === "123") {
+            window.location.href = "page1.html";
+        } else if (code === "456") {
+            window.location.href = "page2.html";
+        } else if (code === "789") {
+            window.location.href = "page3.html";
+        } else {
+            alert("Invalid code. Please try again.");
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>
